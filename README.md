@@ -9,7 +9,7 @@ Usage:
         cp ssh/id_rsa.pub ssh/authorized_keys
 
         # build image and start container
-        docker build -t docker-ssh -f ./Dockerfile
+        docker build -t docker-ssh ./
         docker run --rm --name docker-ssh -v $(pwd)/ssh:/root/.ssh -d -p 2222:22 docker-ssh
 
         # connect  to container
